@@ -6,15 +6,15 @@ import { AsteroidDataProps, Distance } from "@/types";
 import AsteroidList from "../AsteroidList/AsteroidList";
 
 
-function AsteroidData({ data }: AsteroidDataProps) {
+function AsteroidsData({ data, setOrdered }: AsteroidDataProps) {
     const [distance, setDistance] = useState<Distance>("kilometers")
     
     return (
         <>
             <DistanceButtons setDistance={setDistance} />
-            <AsteroidList distance={distance} data={data} />
+            <AsteroidList setOrdered={setOrdered} distance={distance} data={data}/>
         </>
     );
 }
 
-export default AsteroidData;
+export default AsteroidsData;

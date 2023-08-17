@@ -1,19 +1,10 @@
-import AsteroidData from "./components/AsteroidData/AsteroidData"
-import { _api } from "@/utils"
-import classes from "./page.module.css"
-
-async function getAsteroidsData() {
-    const data = await fetch(_api)
-    return data.json()
-}
+import { getAsteroids } from "@/utils"
+import MainPage from "./components/pages/MainPage/MainPage"
 
 export default async function Home() {
-    const data = await getAsteroidsData();
-    console.log(data);
+    const data = await getAsteroids()
+    
     return (
-        <section className={classes.section}>
-            <h2>Ближайшие подлеты астероидов</h2>
-            <AsteroidData data={data}/>
-        </section>
+        <MainPage data={data}/>
     )
 }

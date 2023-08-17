@@ -1,7 +1,10 @@
-/* .large {
-
+.asteroid-info {
+    transition: all 1s;
+    filter: blur(20px);
+    opacity: 0;
 }
 
-.small {
-
-} */
+.asteroid-info.show {
+    filter: blur(0px);
+    opacity: 1;
+}
