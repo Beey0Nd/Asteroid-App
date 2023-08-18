@@ -26,23 +26,31 @@
 .basket button:hover {
     background-color: #c05102;
 }
+
 .basket button:active {
-    background-color: #793200;   
+    background-color: #793200;
 }
 
-@media (max-width: 600px) {
+.basket button:disabled {
+    opacity: .5;
+}
+
+@media (max-width: 700px) {
     .basket {
         display: flex;
         width: 100%;
         border-radius: unset;
         position: fixed;
+        top: unset;
         left: 0;
         bottom: 0;
         justify-content: space-between;
     }
+
     .basket button {
         align-self: center;
     }
+
     .basket>div>p {
         margin: 0;
     }

@@ -1,0 +1,79 @@
+.asteroidPage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.asteroidPage h3 {
+    font-size: 5rem;
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.asteroidPage>div {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 2rem;
+}
+
+.asteroidPage>div {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+    width: 13rem;
+    justify-content: space-between;
+}
+
+.asteroidPage>div:last-child {
+    margin-top: 2rem;
+    margin-bottom: 0;
+}
+
+.asteroidPage>div>div {
+    font-size: 4rem;
+}
+
+.asteroidPage>ul {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 3rem;
+    width: 100%;
+    max-width: 50rem;
+    border-radius: 2rem;
+    border: 1px solid var(--orange);
+}
+
+.asteroidPage>ul>li {
+    padding: 2rem;
+    border-radius: 2rem;
+    border: 1px solid var(--orange);
+}
+
+.asteroidPage>ul>li>p {
+    font-size: 1.5rem;
+}
+
+.asteroidPage>ul>li>p>span {
+    font-size: 2rem;
+    color: var(--orange);
+}
+
+.arrow {
+    display: block;
+    height: auto;
+    width: 3rem;
+    background-color: var(--orange);
+    padding: 0.5rem;
+    object-fit: scale-down;
+    border-radius: 0.5rem;
+}
+
+@media (max-width: 768px) {
+    .asteroidPage h3 {
+        font-size: 3rem;
+    }
+}

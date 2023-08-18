@@ -1,3 +1,55 @@
+.li {
+    display: flex;
+    flex-direction: column;
+}
+
+.date {
+    font-size: 1.75rem;
+    margin-bottom: .25rem;
+}
+
+.li>div {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+
+.distance>p {
+    text-align: center;
+}
+
+.name>p:first-child {
+    font-size: 1.5rem;
+    text-decoration: underline;
+}
+
+.name>p:last-child {
+    font-size: 1.25rem;
+}
+
+.order {
+    margin-bottom: 3rem;
+}
+
+.order>button {
+    background-color: var(--orange);
+    color: white;
+    padding: .4rem .75rem;
+    border-radius: 1rem;
+}
+
+.order>.ordered {
+    opacity: .5;
+}
+
+.order>p {
+    font-size: 1.5rem;
+}
+
+.order>p>span {
+    color: yellow;
+}
+
 .asteroid-info {
     transition: all 1s;
     filter: blur(20px);

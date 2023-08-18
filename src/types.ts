@@ -1,9 +1,9 @@
 // data
 export interface Asteroid {
     name: string
-    estimated_diameter: { 
+    estimated_diameter: {
         kilometers: {
-            estimated_diameter_max: number 
+            estimated_diameter_max: number
         }
     }
     id: AsteroidId
@@ -45,28 +45,29 @@ export type Distance = "kilometers" | "lunar"
 
 // props
 export interface DistanceButtonsProps {
+    distance: Distance
     setDistance: React.Dispatch<React.SetStateAction<Distance>>
 }
 
 export interface AsteroidDataProps {
     data: Data
-    setOrdered: React.Dispatch<React.SetStateAction<string[]>>
+    setOrderedItems: React.Dispatch<React.SetStateAction<string[]>>
 }
 
 export interface AsteroidListProps {
     data: Data
     distance: Distance
-    setOrdered: React.Dispatch<React.SetStateAction<string[]>>
+    setOrderedItems: React.Dispatch<React.SetStateAction<string[]>>
 }
 
 export interface AsteroidListItemProps {
     asteroid: Asteroid
-    distance: Distance 
-    setOrdered: React.Dispatch<React.SetStateAction<string[]>>
+    distance: Distance
+    setOrderedItems: React.Dispatch<React.SetStateAction<string[]>>
 }
 
 export interface AsteroidListItemButtonProps {
-    setOrdered: React.Dispatch<React.SetStateAction<string[]>>
+    setOrderedItems: React.Dispatch<React.SetStateAction<string[]>>
     asteroidId: AsteroidId
 }
 
@@ -75,5 +76,11 @@ export interface MainPageProps {
 }
 
 export interface BasketProps {
-    ordered: AsteroidId[]
+    orderedItems: AsteroidId[]
+}
+
+export interface AsteroidPageButtonsProps {
+    page: number
+    setPage: React.Dispatch<React.SetStateAction<number>>
+    data: ApproachData
 }

@@ -1,12 +1,17 @@
-"use client"
 import { DistanceButtonsProps } from "@/types";
+import classes from "./DistanceButtons.module.css"
 
-function DistanceButtons({ setDistance }: DistanceButtonsProps) {
+function DistanceButtons({ distance, setDistance }: DistanceButtonsProps) {
     return (
-        <span>
+        <span className={classes.distanceButtons}>
             <button
+                className={`${distance === "kilometers" ? classes.chosen : classes.button}`}
                 onClick={() => setDistance("kilometers")}
-            >В километрах</button> | <button
+            >В километрах
+            </button>
+            <span>|</span>
+            <button
+                className={`${distance === "lunar" ? classes.chosen : classes.button}`}
                 onClick={() => setDistance("lunar")}
             >В лунных орбитах</button>
         </span>

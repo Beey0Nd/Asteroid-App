@@ -1,24 +1,19 @@
 import { BasketProps } from "@/types";
 import classes from "./Basket.module.css"
+import { getAsteroidEnding } from "@/utils";
+import Link from "next/link";
 
-function Basket({ ordered }: BasketProps) {
-    function getAsteroidEnding(number: number) {
-        if (number % 10 === 1 && number % 100 !== 11) {
-            return "";
-        } else if ([2, 3, 4].includes(number % 10) && ![12, 13, 14].includes(number % 100)) {
-            return "а";
-        } else {
-            return "ов";
-        }
-    }
+function Basket({ orderedItems }: BasketProps) {
 
     return (
         <div className={classes.basket}>
             <div>
                 <h3>Корзина</h3>
-                <p>{ordered.length} астероид{getAsteroidEnding(ordered.length)}</p>
+                <p>{orderedItems.length} астероид{getAsteroidEnding(orderedItems.length)}</p>
             </div>
-            <button>Отправить</button>
+            <Link href={{ pathname: "/basket", query: { orderedItems } }}>
+                <button disabled={!orderedItems.length}>Отправить</button>
+            </Link>
         </div>
     );
 }
