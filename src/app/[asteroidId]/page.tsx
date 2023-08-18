@@ -11,7 +11,6 @@ export default async function Asteroid({
 }) {
 
     const data: ApproachData = await getAsteroid(params.asteroidId)
-    console.log(data);
     return (
         <AsteroidPage data={data} />
     );
