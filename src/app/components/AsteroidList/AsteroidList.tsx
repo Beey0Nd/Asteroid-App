@@ -9,7 +9,7 @@ import AsteroidListItem from "../AsteroidListItem/AsteroidListItem";
 function AsteroidList({ data, distance, setOrderedItems }: AsteroidListProps) {
     const [currentDate, setCurrentDate] = useState(startDate);
     const [asteroidsList, setAsteroidsList] = useState(data.near_earth_objects[startDate]);
-    
+
     useEffect(() => {
         const asteroids = document.querySelectorAll("li")
 
@@ -33,23 +33,7 @@ function AsteroidList({ data, distance, setOrderedItems }: AsteroidListProps) {
         return () => {
             observer.observe(asteroids[asteroids.length - 1])
         };
-    }, [currentDate]);
-
-    // useEffect(() => {
-    //     const asteroids = document.querySelectorAll("li")
-
-    //     const observer = new IntersectionObserver(entries => {
-    //         entries.forEach(entry => {
-    //             if(entry.isIntersecting) entry.target.classList.add(classes.show)
-    //         })
-    //     });
-
-    //     asteroids.forEach(asteroid => observer.observe(asteroid))
-
-    //     return () => {
-    //         asteroids.forEach(asteroid => observer.unobserve(asteroid))
-    //     };
-    // }, [currentDate]);
+    }, [currentDate, data.near_earth_objects]);
 
     return (
         <ul>
@@ -60,7 +44,7 @@ function AsteroidList({ data, distance, setOrderedItems }: AsteroidListProps) {
                         setOrderedItems={setOrderedItems}
                         asteroid={asteroid}
                         distance={distance} />
-                    )
+                )
                 )
             }
         </ul>

@@ -27,7 +27,12 @@ function AsteroidListItem({
             <div>
                 <div className={classes.distance}>
                     <p>{Math.round(+asteroid.close_approach_data[0].miss_distance[distance]).toLocaleString("ru")} {distance === "lunar" ? "лунных орбит" : "км"}</p>
-                    <img src={DistanceArrow.src} alt="Distance arrow image" />
+                    <Image
+                        src={DistanceArrow.src} 
+                        alt="Distance arrow image"
+                        width={100}
+                        height={6}
+                    />
                 </div>
                 <div>
                     <Link href={`/${asteroid.id}`}>

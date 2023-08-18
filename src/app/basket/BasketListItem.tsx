@@ -31,7 +31,11 @@ export async function BasketListItem({
             <div>
                 <div className={classes.distance}>
                     <p>{Math.round(+data.close_approach_data[0].miss_distance["lunar"]).toLocaleString("ru") + " лунных орбит"}</p>
-                    <img src={DistanceArrow.src} alt="Distance arrow image" />
+                    <Image 
+                    src={DistanceArrow.src} alt="Distance arrow image"
+                    width={100}
+                    height={6}
+                    />
                 </div>
                 <div>
                     <Link href={`/${data.id}`}>
