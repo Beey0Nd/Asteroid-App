@@ -44,7 +44,7 @@ export function formatToRuDate(engDate: string) {
     const month = dateObj.toLocaleString('ru', { month: 'short' });
     const year = dateObj.getFullYear();
 
-    const ruDateString = day + " " + month.replace(".", "") + " " + year;
+    const ruDateString = `${day} ${month.replace(".", "")} ${year}`;
 
     return ruDateString
 }
