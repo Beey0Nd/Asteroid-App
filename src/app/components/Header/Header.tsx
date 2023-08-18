@@ -16,7 +16,7 @@ function Header() {
             className={classes.header}
         >
             <h1>ARMAGEDDON 2023</h1>
-            <p>ООО "Команда им. Б. Уиллиса".</p>
+            <p>ООО &quot;Команда им. Б. Уиллиса&quot;.</p>
             <p>Взрываем астероиды с 1998 года.</p>
         </header>
     );
