@@ -1,3 +1,4 @@
+import { v4 } from "uuid";
 import { BasketListItem } from "./BasketListItem";
 import classes from "./page.module.css"
 
@@ -7,7 +8,8 @@ function BasketPage({ searchParams }: any) {
             <h3>Заказ отправлен!</h3>
             <ul>
                 {searchParams.orderedItems.map((item: string) => (
-                    <BasketListItem asteroidId={item} />
+                    <BasketListItem key={v4()}
+                    asteroidId={item} />
                 ))}
             </ul>
         </section>
