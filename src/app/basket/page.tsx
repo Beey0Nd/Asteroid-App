@@ -8,11 +8,11 @@ function BasketPage({
 }: BasketPageProps) {
 
     function renderItems() {
-        if (Array.isArray(searchParams)) {
-            const items = searchParams.orderedItems as string[];
+        if (Array.isArray(searchParams.orderedItems)) {
+            const orderedItems = searchParams.orderedItems as string[];
 
             return (
-                items.map((item: string) => (
+                orderedItems.map((item: string) => (
                     <BasketListItem key={v4()}
                         asteroidId={item} />
                 ))

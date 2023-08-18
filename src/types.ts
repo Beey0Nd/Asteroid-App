@@ -87,6 +87,6 @@ export interface AsteroidPageButtonsProps {
 
 export interface BasketPageProps {
     searchParams: {
-        orderedItems: string[] | string
+        orderedItems: AsteroidId[] | AsteroidId
     }
 }
