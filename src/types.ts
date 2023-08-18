@@ -84,3 +84,9 @@ export interface AsteroidPageButtonsProps {
     setPage: React.Dispatch<React.SetStateAction<number>>
     data: ApproachData
 }
+
+export interface BasketPageProps {
+    searchParams: {
+        orderedItems: string[] | string
+    }
+}
