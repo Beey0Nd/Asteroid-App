@@ -1,13 +1,13 @@
 "use client"
 
 import { useState } from "react"
-import { AsteroidId, MainPageProps } from "@/types";
+import { MainPageProps, OrderedItem } from "@/types";
 import AsteroidsData from "../../AsteroidsData/AsteroidsData";
 import Basket from "../../Basket/Basket";
 import classes from "./MainPage.module.css"
 
 function MainPage({ data }: MainPageProps) {
-    const [orderedItems, setOrderedItems] = useState<AsteroidId[]>([])
+    const [orderedItems, setOrderedItems] = useState<OrderedItem[]>([])
 
     return (
         <section className={classes.section}>

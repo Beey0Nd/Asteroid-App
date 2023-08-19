@@ -43,6 +43,11 @@ export interface Approach {
 
 export type Distance = "kilometers" | "lunar"
 
+export type OrderedItem = {
+    asteroidId: AsteroidId
+    approachDate: string
+}
+
 // props
 export interface DistanceButtonsProps {
     distance: Distance
@@ -51,24 +56,23 @@ export interface DistanceButtonsProps {
 
 export interface AsteroidDataProps {
     data: Data
-    setOrderedItems: React.Dispatch<React.SetStateAction<string[]>>
+    setOrderedItems: React.Dispatch<React.SetStateAction<OrderedItem[]>>
 }
 
 export interface AsteroidListProps {
     data: Data
     distance: Distance
-    setOrderedItems: React.Dispatch<React.SetStateAction<string[]>>
+    setOrderedItems: React.Dispatch<React.SetStateAction<OrderedItem[]>>
 }
 
 export interface AsteroidListItemProps {
     asteroid: Asteroid
     distance: Distance
-    setOrderedItems: React.Dispatch<React.SetStateAction<string[]>>
+    setOrderedItems: React.Dispatch<React.SetStateAction<OrderedItem[]>>
 }
 
-export interface AsteroidListItemButtonProps {
-    setOrderedItems: React.Dispatch<React.SetStateAction<string[]>>
-    asteroidId: AsteroidId
+export interface AsteroidListItemButtonProps extends OrderedItem {
+    setOrderedItems: React.Dispatch<React.SetStateAction<OrderedItem[]>>
 }
 
 export interface MainPageProps {
@@ -76,7 +80,7 @@ export interface MainPageProps {
 }
 
 export interface BasketProps {
-    orderedItems: AsteroidId[]
+    orderedItems: OrderedItem[]
 }
 
 export interface AsteroidPageButtonsProps {
@@ -87,6 +91,8 @@ export interface AsteroidPageButtonsProps {
 
 export interface BasketPageProps {
     searchParams: {
-        orderedItems: AsteroidId[] | AsteroidId
+        orderedItems: OrderedItem[]
     }
 }
+
+export type BasketListItemProps = OrderedItem

@@ -38,13 +38,15 @@ function AsteroidList({ data, distance, setOrderedItems }: AsteroidListProps) {
     return (
         <ul>
             {
-                asteroidsList.map((asteroid: Asteroid) => (
-                    <AsteroidListItem
-                        key={v4()}
-                        setOrderedItems={setOrderedItems}
-                        asteroid={asteroid}
-                        distance={distance} />
-                )
+                asteroidsList.map((asteroid: Asteroid) => {
+                    return (
+                        <AsteroidListItem
+                            key={v4()}
+                            setOrderedItems={setOrderedItems}
+                            asteroid={asteroid}
+                            distance={distance} />
+                    )
+                }
                 )
             }
         </ul>

@@ -26,7 +26,7 @@ function AsteroidListItem({
             <p className={classes.date}>{formatToRuDate(asteroid.close_approach_data[0].close_approach_date_full)}</p>
             <div>
                 <div className={classes.distance}>
-                    <p>{Math.round(+asteroid.close_approach_data[0].miss_distance[distance]).toLocaleString("ru")} {distance === "lunar" ? "лунных орбит" : "км"}</p>
+                    <p>{Math.round(+asteroid.close_approach_data[0].miss_distance[distance])} {distance === "lunar" ? "лунных орбит" : "км"}</p>
                     <Image
                         src={DistanceArrow.src} 
                         alt="Distance arrow image"
@@ -51,7 +51,7 @@ function AsteroidListItem({
             </div>
             <div className={classes.order}>
                 <AsteroidListItemButton
-                    setOrderedItems={setOrderedItems} asteroidId={asteroid.id} />
+                    setOrderedItems={setOrderedItems} asteroidId={asteroid.id} approachDate={asteroid.close_approach_data[0].close_approach_date_full}/>
                 {renderHazardous(asteroid.is_potentially_hazardous_asteroid)}
             </div>
         </li>
