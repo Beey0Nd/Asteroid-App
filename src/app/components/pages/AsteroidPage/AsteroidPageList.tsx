@@ -15,7 +15,7 @@ function AsteroidPageList({
                     return (
                         <li key={v4()}>
                             <p>Скорость: <span>{Math.round(+approach.relative_velocity.kilometers_per_hour)} км/ч</span></p>
-                            <p>Дата и время подлета: <span>{new Date(approach.close_approach_date_full).toLocaleString("ru")}</span></p>
+                            <p>Дата и время подлета: <span>{new Date(approach.close_approach_date_full).toLocaleString("ru").toString()}</span></p>
                             <p>Расстояние до Земли: <span>{Math.round(+approach.miss_distance.kilometers)} км</span></p>
                             <p>Орбитальное тело: <span>{determineOrbitingBody(approach.orbiting_body)}</span></p>
                         </li>

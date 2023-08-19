@@ -46,7 +46,7 @@ export function formatToRuDate(engDate: string) {
 
     const ruDateString = `${day} ${month.replace(".", "")} ${year}`;
 
-    return ruDateString
+    return ruDateString.toString()
 }
 
 export function extractAsteroidName(str: string) {
