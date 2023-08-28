@@ -31,7 +31,7 @@ function AsteroidList({ data, distance, setOrderedItems }: AsteroidListProps) {
         observer.observe(asteroids[asteroids.length - 1])
 
         return () => {
-            observer.observe(asteroids[asteroids.length - 1])
+            observer.unobserve(asteroids[asteroids.length - 1])
         };
     }, [currentDate, data.near_earth_objects]);
 
