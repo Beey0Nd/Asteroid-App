@@ -39,7 +39,7 @@ function AsteroidList({ data, distance, setOrderedItems }: AsteroidListProps) {
         <ul>
             {
                 asteroidsList.map((asteroid: Asteroid) => {
-                    return (
+                    if(asteroid) return (
                         <AsteroidListItem
                             key={v4()}
                             setOrderedItems={setOrderedItems}
