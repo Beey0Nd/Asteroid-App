@@ -36,3 +36,9 @@ li {
         background-position: -450px;
     }
 }
+
+@media (max-width: 700px) {
+    body {
+      background-attachment: scroll;
+    }
+  }
