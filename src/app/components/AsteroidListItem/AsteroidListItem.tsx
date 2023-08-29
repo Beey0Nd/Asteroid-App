@@ -6,6 +6,7 @@ import { extractAsteroidName, formatToRuDate, kilometersToMeters } from "@/utils
 import asteroidImage from "@/images/asteroid.png"
 import DistanceArrow from "@/icons/DistanceArrow.svg"
 import classes from "./AsteroidListItem.module.css"
+import Head from "next/head";
 
 function AsteroidListItem({
     asteroid, distance, setOrderedItems
@@ -23,6 +24,10 @@ function AsteroidListItem({
 
     return (
         <li className={classes.li}>
+            <Head>
+                <meta name="format-detection" content="telephone=no"/>
+                <meta name="format-detection" content="date=no" /> 
+            </Head>
             <p className={classes.date}>{formatToRuDate(asteroid.close_approach_data[0].close_approach_date_full)}</p>
             <div>
                 <div className={classes.distance}>
