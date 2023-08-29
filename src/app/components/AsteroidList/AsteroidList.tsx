@@ -5,6 +5,7 @@ import { v4 } from "uuid";
 import { Asteroid, AsteroidListProps } from "@/types";
 import { startDate } from "@/utils";
 import AsteroidListItem from "../AsteroidListItem/AsteroidListItem";
+import Head from "next/head";
 
 function AsteroidList({ data, distance, setOrderedItems }: AsteroidListProps) {
     const [currentDate, setCurrentDate] = useState(startDate);
@@ -37,6 +38,10 @@ function AsteroidList({ data, distance, setOrderedItems }: AsteroidListProps) {
 
     return (
         <ul>
+            <Head>
+                <meta name="format-detection" content="telephone=no"/>
+                <meta name="format-detection" content="date=no" /> 
+            </Head>
             {
                 asteroidsList.map((asteroid: Asteroid) => {
                     if(asteroid) return (
