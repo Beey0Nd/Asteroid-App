@@ -1,6 +1,11 @@
 .header {
+    width: -webkit-max-content;
+    width: -moz-max-content;
     width: max-content;
-    user-select: none;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
     cursor: pointer;
 }
 

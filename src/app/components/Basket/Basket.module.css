@@ -3,6 +3,7 @@
     background-color: #232526;
     border-radius: 2rem;
     padding: 1rem;
+    position: -webkit-sticky;
     position: sticky;
     top: 5rem;
 }

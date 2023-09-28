@@ -52,11 +52,13 @@
 
 .asteroid-info {
     transition: all 1s;
-    filter: blur(20px);
+    -webkit-filter: blur(20px);
+            filter: blur(20px);
     opacity: 0;
 }
 
 .asteroid-info.show {
-    filter: blur(0px);
+    -webkit-filter: blur(0px);
+            filter: blur(0px);
     opacity: 1;
 }

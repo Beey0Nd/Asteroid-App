@@ -68,7 +68,8 @@
     width: 3rem;
     background-color: var(--orange);
     padding: 0.5rem;
-    object-fit: scale-down;
+    -o-object-fit: scale-down;
+       object-fit: scale-down;
     border-radius: 0.5rem;
 }
 
